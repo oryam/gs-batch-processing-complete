@@ -15,4 +15,6 @@ hs_err_pid*
 # IDE
 .classpath
 .project
+.factorypath
 /.settings/
+/.apt_generated/

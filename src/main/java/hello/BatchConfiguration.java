@@ -59,7 +59,8 @@ public class BatchConfiguration {
     public JdbcBatchItemWriter<Person> writer() {
         JdbcBatchItemWriter<Person> writer = new JdbcBatchItemWriter<Person>();
         writer.setItemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<Person>());
-        writer.setSql("INSERT INTO people (first_name, last_name) VALUES (:firstName, :lastName)");
+//        writer.setSql("INSERT INTO people (first_name, last_name) VALUES (:firstName, :lastName)"); // in memory db
+        writer.setSql("INSERT INTO people (person_id, first_name, last_name) VALUES (s_people.nextval, :firstName, :lastName)"); // oracle with s_people sequence
         writer.setDataSource(dataSource);
         return writer;
     }

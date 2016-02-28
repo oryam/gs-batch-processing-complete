@@ -1,0 +1,12 @@
+oracle:
+  url: jdbc:oracle:thin:@//localhost:1521/xe
+  username: xxx
+  password: yyy
+  #driver-class-name: oracle.jdbc.OracleDriver
+
+spring:
+  #batch.initializer.enabled: false
+  datasource:
+    initialize: false
+    platform: oracle
+  jpa.database-platform: org.hibernate.dialect.OracleDialect
