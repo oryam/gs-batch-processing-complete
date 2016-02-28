@@ -37,7 +37,7 @@ Modify `pom.xml`
 - Create the table people
 - Create the sequence for auto increment
 
-```
+```sql
 CREATE TABLE people  (
     person_id INTEGER NOT NULL PRIMARY KEY,
     first_name VARCHAR(20),
@@ -48,12 +48,12 @@ CREATE SEQUENCE s_people;
 ```
 
 **Spring configuration**  
-Example of application.yml configuration.  
+Example of `application.yml` configuration.  
 - `batch.initializer.enabled` tells to Spring to create Spring batch monitoring tables.
 - `spring.datasource.initialize` tells to Spring to load schema-{platform}.sql script.
 - `spring.datasource.platform` tells the platform.
 
-```
+```yml
 oracle:
   url: jdbc:oracle:thin:@//localhost:1521/xe
   username: xxx
