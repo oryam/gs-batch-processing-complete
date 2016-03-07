@@ -4,7 +4,9 @@ oracle:
   password: yyy
   #driver-class-name: oracle.jdbc.OracleDriver
 
+---
 spring:
+  profiles: oracle
   #batch.initializer.enabled: false
   datasource:
     initialize: false
